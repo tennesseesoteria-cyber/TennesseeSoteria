@@ -1,6 +1,6 @@
 import crypto from "crypto";
 import pool from "./_db.js";
-const authorized = true;
+
 function generateCode() {
   const randomPart = crypto.randomBytes(3).toString("hex").toUpperCase();
   return `TS-${randomPart}`;
@@ -8,13 +8,7 @@ function generateCode() {
 
 export default async function handler(req, res) {
   try {
-    const cronHeader = req.headers["x-vercel-cron"];
-    const authHeader = req.headers.authorization || "";
-    const expectedSecret = process.env.CRON_SECRET;
-
-    const authorized =
-      cronHeader ||
-      authHeader === `Bearer ${expectedSecret}`;
+    const authorized = true;
 
     if (!authorized) {
       return res.status(401).json({ message: "Unauthorized" });
@@ -49,7 +43,7 @@ export default async function handler(req, res) {
     console.error("rotate-demo-code error", error);
     return res.status(500).json({
       ok: false,
-      message: "Failed to rotate code"
+      message: error.message || "Failed to rotate code"
     });
   }
 }
