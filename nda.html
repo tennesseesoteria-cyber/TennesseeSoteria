@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NDA | Tennessee Soteria</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="demo-page">
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <img src="images/logo.png" alt="Tennessee Soteria Logo" class="logo-img" />
+        <div class="brand-text">
+          <span class="brand-name">Tennessee Soteria</span>
+          <span class="brand-subtitle">Rapid Chemical Emergency Decision Support</span>
+        </div>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#founders">Founders</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="demo.html" class="demo-nav-link">Demo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="demo-shell">
+    <div class="container">
+      <section class="demo-card">
+        <p class="section-label">Non-Disclosure Agreement</p>
+        <h1>Demo Confidentiality Agreement</h1>
+        <p>
+          Before viewing the demo, please confirm that your organization will keep
+          the contents of this demonstration confidential and will not share it
+          outside authorized internal stakeholders.
+        </p>
+
+        <div class="nda-box">
+          <p>
+            By proceeding, you acknowledge that any information, visuals, workflows,
+            product concepts, and technical details presented in the Tennessee Soteria
+            demo are confidential and proprietary. You agree not to disclose, copy,
+            redistribute, or discuss the demo content with third parties without prior
+            written permission from Tennessee Soteria.
+          </p>
+        </div>
+
+        <form id="ndaForm" class="demo-form">
+          <input
+            id="companyName"
+            class="demo-input"
+            type="text"
+            placeholder="Enter company name"
+            required
+          />
+          <button type="submit" class="btn btn-primary">I Agree and Continue</button>
+          <div id="ndaMessage" class="demo-error"></div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script src="demo.js"></script>
+</body>
+</html>

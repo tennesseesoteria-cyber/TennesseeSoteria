@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo Access | Tennessee Soteria</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="demo-page">
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <img src="images/logo.png" alt="Tennessee Soteria Logo" class="logo-img" />
+        <div class="brand-text">
+          <span class="brand-name">Tennessee Soteria</span>
+          <span class="brand-subtitle">Rapid Chemical Emergency Decision Support</span>
+        </div>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#founders">Founders</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="demo.html" class="demo-nav-link">Demo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="demo-shell">
+    <div class="container">
+      <section class="demo-card">
+        <p class="section-label">Confidential Demo</p>
+        <h1>Request Access</h1>
+        <p>
+          Enter your access code to continue to the Tennessee Soteria product demo.
+          Codes expire automatically after a set time.
+        </p>
+
+        <form id="codeForm" class="demo-form">
+          <input
+            id="accessCode"
+            class="demo-input"
+            type="text"
+            placeholder="Enter access code"
+            autocomplete="off"
+            required
+          />
+          <button type="submit" class="btn btn-primary">Continue</button>
+          <div id="codeMessage" class="demo-error"></div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script src="demo.js"></script>
+</body>
+</html>
