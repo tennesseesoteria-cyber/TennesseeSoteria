@@ -8,7 +8,13 @@ function generateCode() {
 
 export default async function handler(req, res) {
   try {
-    const authorized = true;
+    const cronHeader = req.headers["x-vercel-cron"];
+    const authHeader = req.headers.authorization || "";
+    const expectedSecret = process.env.CRON_SECRET;
+
+    const authorized =
+      Boolean(cronHeader) ||
+      authHeader === `Bearer ${expectedSecret}`;
 
     if (!authorized) {
       return res.status(401).json({ message: "Unauthorized" });
