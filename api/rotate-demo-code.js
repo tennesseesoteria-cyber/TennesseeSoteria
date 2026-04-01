@@ -1,6 +1,6 @@
 import crypto from "crypto";
 import pool from "./_db.js";
-
+const authorized = true;
 function generateCode() {
   const randomPart = crypto.randomBytes(3).toString("hex").toUpperCase();
   return `TS-${randomPart}`;
