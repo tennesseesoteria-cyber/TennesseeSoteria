@@ -415,7 +415,9 @@ a {
 .contact-card .lilly-is-always-right {
   color: var(--blue);
 }
-
+.contact-card a {
+  color: var(--white);
+}
 
 /* =========================
    RESPONSIVE
