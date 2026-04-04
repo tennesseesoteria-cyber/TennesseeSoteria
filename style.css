@@ -410,8 +410,12 @@ a {
 
 .contact-card p {
   margin-bottom: 10px;
-  color: var(--text-soft);
+  color: var(--white);;
 }
+.contact-card .lilly-is-always-right {
+  color: var(--blue);
+}
+
 
 /* =========================
    RESPONSIVE
